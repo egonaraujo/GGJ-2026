@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b3vm3jj0odnmk"]
+
+[ext_resource type="Script" uid="uid://xy2qnsflbyp3" path="res://Screens/Prototype/Mask/mask.gd" id="1_ch237"]
+[ext_resource type="PackedScene" uid="uid://kbhnl8t8hs3v" path="res://Screens/Prototype/Mask/Shard/Shard.tscn" id="2_2sar1"]
+
+[node name="Mask" type="Node2D" unique_id=401451404]
+script = ExtResource("1_ch237")
+
+[node name="Shards" type="Node2D" parent="." unique_id=1129504359]
+
+[node name="Shard0" parent="Shards" unique_id=1636635879 instance=ExtResource("2_2sar1")]
+position = Vector2(0, -40)
+
+[node name="Shard1" parent="Shards" unique_id=616654696 instance=ExtResource("2_2sar1")]
+
+[node name="Shard2" parent="Shards" unique_id=94291179 instance=ExtResource("2_2sar1")]
+position = Vector2(0, 40)

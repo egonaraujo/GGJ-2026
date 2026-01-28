@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dxhmohib7vsmb"]
+
+[ext_resource type="Script" uid="uid://bm40by1r21e7b" path="res://Screens/Prototype/ColorPicker/Ink/ink.gd" id="1_5860p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7jl3"]
+
+[node name="Ink" type="Node2D" unique_id=902954645]
+script = ExtResource("1_5860p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1847101305]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=971212578]
+shape = SubResource("CircleShape2D_h7jl3")
+
+[node name="Border" type="Polygon2D" parent="." unique_id=2092152121]
+visible = false
+color = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(12, 12, 12, -12, -12, -12, -12, 12)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2114945189]
+polygon = PackedVector2Array(10, 10, 10, -10, -10, -10, -10, 10)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

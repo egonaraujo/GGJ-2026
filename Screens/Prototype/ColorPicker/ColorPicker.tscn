@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://rqilk4mjc08j"]
+
+[ext_resource type="Script" uid="uid://q6g4r761500l" path="res://Screens/Prototype/ColorPicker/color_picker.gd" id="1_j53vk"]
+[ext_resource type="PackedScene" uid="uid://dxhmohib7vsmb" path="res://Screens/Prototype/ColorPicker/Ink/Ink.tscn" id="1_t1hx5"]
+
+[node name="ColorPicker" type="Node2D" unique_id=1348064989]
+script = ExtResource("1_j53vk")
+
+[node name="Inks" type="Node2D" parent="." unique_id=1159502528]
+
+[node name="Ink0" parent="Inks" unique_id=902954645 instance=ExtResource("1_t1hx5")]
+position = Vector2(-80, 0)
+ink = Color(1, 1, 1, 1)
+
+[node name="Ink1" parent="Inks" unique_id=289086666 instance=ExtResource("1_t1hx5")]
+position = Vector2(-40, 0)
+
+[node name="Ink2" parent="Inks" unique_id=2017585015 instance=ExtResource("1_t1hx5")]
+ink = Color(1, 0, 0, 1)
+
+[node name="Ink3" parent="Inks" unique_id=1460963126 instance=ExtResource("1_t1hx5")]
+position = Vector2(40, 0)
+ink = Color(0, 1, 0, 1)
+
+[node name="Ink4" parent="Inks" unique_id=1876577828 instance=ExtResource("1_t1hx5")]
+position = Vector2(80, 0)
+ink = Color(0, 0, 1, 1)
