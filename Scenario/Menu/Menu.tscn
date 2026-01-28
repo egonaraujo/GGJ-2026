@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dt85l1btihc65"]
+
+[ext_resource type="Script" uid="uid://df3lysewnq52p" path="res://Scenario/Menu/Menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ba3ig36auhct7" path="res://Scenario/Menu/logo-ggj@4x.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://gkit5ekjbkey" path="res://Scenario/Menu/btn-info@4x.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://k6lkkejf33pq" path="res://Scenario/Menu/tela-inicial@4x.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c4crpr1xgmjkm" path="res://Scenario/Menu/logo-godot@4x.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bt32qeafw7pir" path="res://Scenario/Menu/btn-jogar@4x.png" id="6"]
+
+[node name="Menu" type="Control" unique_id=1267472548]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3248.0
+offset_bottom = -1500.0
+script = ExtResource("1")
+
+[node name="Background" type="TextureRect" parent="." unique_id=465797804]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 3252.0
+offset_bottom = 1502.0
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Play" type="TextureButton" parent="." unique_id=1257453832]
+layout_mode = 0
+offset_left = 1190.43
+offset_top = 1103.35
+offset_right = 2014.44
+offset_bottom = 1467.35
+texture_normal = ExtResource("6")
+
+[node name="Credits" type="TextureButton" parent="." unique_id=649504437]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 2752.0
+offset_top = 64.0
+offset_right = 3116.01
+offset_bottom = 428.0
+texture_normal = ExtResource("3")
+
+[node name="GodotLogo" type="TextureRect" parent="." unique_id=2081629531]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 632.001
+offset_bottom = 305.0
+texture = ExtResource("5")
+stretch_mode = 1
+
+[node name="GGJLogo" type="TextureRect" parent="." unique_id=870369555]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 375.001
+offset_bottom = 631.0
+texture = ExtResource("2")
+stretch_mode = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]

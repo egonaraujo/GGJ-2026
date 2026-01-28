@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PlantaSocorro"
+run/main_scene="res://Scenario/Menu/Menu.tscn"
+config/features=PackedStringArray("4.6")
+config/icon="res://Icons/planta-xxxhdpi.png"
+
+[autoload]
+
+MusicController="*res://MusicController/MusicControllerSingleton.tscn"
+GameControllerSingleton="*res://GameController/GameControllerSingleton.tscn"
+
+[display]
+
+window/size/viewport_width=3248
+window/size/viewport_height=1500
+window/size/window_width_override=1624
+window/size/window_height_override=750
+window/stretch/mode="viewport"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+environment/defaults/default_environment="res://default_env.tres"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+vram_compression/import_etc=true

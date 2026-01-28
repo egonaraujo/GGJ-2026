@@ -1,0 +1,8 @@
+res://default_env.tres
+res://Scenario/Menu/Menu.tscn
+res://GameController/GameData.gd
+res://Scenario/Phases/Workstation/Workstation.gd
+res://Tools/Tool.gd
+res://Tools/Shears.tscn
+res://Plants/Cactus/Cactus.tscn
+res://Scenario/Tutorial/Tutorial.gd

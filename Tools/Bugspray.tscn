@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tools/Tool.gd" type="Script" id=1]
+[ext_resource path="res://Tools/ass-bugspray.png" type="Texture2D" id=2]
+[ext_resource path="res://Tools/highlight-yellow.png" type="Texture2D" id=3]
+[ext_resource path="res://Tools/Outline.gdshader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/outline_color = null
+shader_param/enabled = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 152, 328 )
+
+[node name="Bugspray" type="Node2D"]
+script = ExtResource( 1 )
+toolID = 3
+tool_asset = NodePath("ass-bugspray")
+
+[node name="highlight" type="Sprite2D" parent="."]
+position = Vector2( 1.18808, -0.190737 )
+scale = Vector2( 4.9, 4.9 )
+texture = ExtResource( 3 )
+
+[node name="ass-bugspray" type="Sprite2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( -8.12253, -10.7013 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 12.6109, -9.45372 )
+shape = SubResource( 2 )
