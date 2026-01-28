@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://cff72e3ir7agj" path="res://OldPlanta/GameController/GameControllerSingleton.gd" id="1"]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://diyaets21cv2e"]
+
+[ext_resource type="Script" uid="uid://yi0qde7cffqp" path="res://OldPlanta/MusicController/music_controller_singleton.gd" id="1"]
+
+[node name="Node" type="Node" unique_id=958929897]
+script = ExtResource("1")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=719667866]
+autoplay = true

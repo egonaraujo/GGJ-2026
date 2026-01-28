@@ -1,0 +1,283 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://c03hn10eeim62" path="res://OldPlanta/Plants/PlantController.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://v1nptr6cbtto" path="res://OldPlanta/Plants/Pitanga/ass-pitanga-galho-1@4x.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bv5bu1ijoi8uq" path="res://OldPlanta/Plants/Pitanga/ass-pitanga-seco@4x.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dmd0byq80expo" path="res://OldPlanta/Plants/Pitanga/ass-pitanga-galho-3@4x.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://temo7uvgsfpe" path="res://OldPlanta/Plants/Pitanga/ass-pitanga-galho-2@4x.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cqs2bwimc4rss" path="res://OldPlanta/Plants/Pitanga/ass-pitanga@4x.png" id="7"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Plants/Insects.tscn" id="8"]
+[ext_resource type="Script" uid="uid://b1m8qak84113b" path="res://OldPlanta/Plants/FallingLeaves.gd" id="9"]
+[ext_resource type="Texture2D" uid="uid://dphstyuuy21k0" path="res://OldPlanta/Plants/Pitanga/ass-pitanga-fruta@4x.png" id="10"]
+[ext_resource type="Script" uid="uid://djrgse38j3s5" path="res://OldPlanta/Plants/Flowers.gd" id="11"]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 280.887
+height = 414.986
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 73.2191, 165.036 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 237.441, 97.9814 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 112.846, 248.926 )
+
+[node name="Pitanga" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="plant-healthy" type="Sprite2D" parent="."]
+texture = ExtResource( 7 )
+
+[node name="Dried" type="Sprite2D" parent="."]
+position = Vector2( -0.123871, 0.506851 )
+scale = Vector2( 1.015, 1.015 )
+texture = ExtResource( 4 )
+
+[node name="Flowers" type="Node2D" parent="."]
+
+[node name="Flower1" type="Sprite2D" parent="Flowers"]
+position = Vector2( -193.842, -48.9751 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -201, -57 )
+
+[node name="Flower2" type="Sprite2D" parent="Flowers"]
+position = Vector2( -164.916, -23.906 )
+rotation = 0.630581
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -166, -32 )
+
+[node name="Flower3" type="Sprite2D" parent="Flowers"]
+position = Vector2( -211.106, -13.047 )
+rotation = -0.241564
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -216, -14 )
+
+[node name="Flower4" type="Sprite2D" parent="Flowers"]
+position = Vector2( -50, -89 )
+rotation = -0.610431
+scale = Vector2( 0.92, 0.92 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -60, -92 )
+
+[node name="Flower13" type="Sprite2D" parent="Flowers"]
+position = Vector2( -56, -183 )
+rotation = -0.134755
+scale = Vector2( 0.74, 0.74 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -60, -186 )
+
+[node name="Flower14" type="Sprite2D" parent="Flowers"]
+position = Vector2( -24, -173 )
+rotation = 0.160225
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -26, -174 )
+
+[node name="Flower15" type="Sprite2D" parent="Flowers"]
+position = Vector2( -24, -203 )
+rotation = 0.714019
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -28, -206 )
+
+[node name="Flower16" type="Sprite2D" parent="Flowers"]
+position = Vector2( -66.2847, -277.359 )
+rotation = -0.128089
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -72, -282 )
+
+[node name="Flower18" type="Sprite2D" parent="Flowers"]
+position = Vector2( -45.5456, -312.866 )
+rotation = 0.0807902
+scale = Vector2( 0.98, 0.98 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -53, -321 )
+
+[node name="Flower17" type="Sprite2D" parent="Flowers"]
+position = Vector2( -25.954, -282.104 )
+rotation = 0.708682
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -26, -289 )
+
+[node name="Flower19" type="Sprite2D" parent="Flowers"]
+position = Vector2( 84, -340 )
+rotation = 0.708682
+scale = Vector2( 0.98, 0.98 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 84, -344 )
+
+[node name="Flower20" type="Sprite2D" parent="Flowers"]
+position = Vector2( 138, -340 )
+rotation = -0.0250816
+scale = Vector2( 0.98, 0.98 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 132, -344 )
+
+[node name="Flower21" type="Sprite2D" parent="Flowers"]
+position = Vector2( 115, -300 )
+rotation = 0.168093
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 112, -304 )
+
+[node name="Flower5" type="Sprite2D" parent="Flowers"]
+position = Vector2( -18, -93 )
+rotation = 0.329863
+scale = Vector2( 0.84, 0.84 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( -22, -98 )
+
+[node name="Flower6" type="Sprite2D" parent="Flowers"]
+position = Vector2( 178.977, 15.066 )
+rotation = 0.700657
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 177, 6 )
+
+[node name="Flower7" type="Sprite2D" parent="Flowers"]
+position = Vector2( 139.45, 9.96865 )
+rotation = 0.31025
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 135, 3 )
+
+[node name="Flower8" type="Sprite2D" parent="Flowers"]
+position = Vector2( 180, -118 )
+rotation = 0.662492
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 182, -116 )
+
+[node name="Flower9" type="Sprite2D" parent="Flowers"]
+position = Vector2( 150.099, -149.364 )
+rotation = 0.662443
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 154, -158 )
+
+[node name="Flower12" type="Sprite2D" parent="Flowers"]
+position = Vector2( 92, -134 )
+rotation = 0.298779
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 90, -138 )
+
+[node name="Flower11" type="Sprite2D" parent="Flowers"]
+position = Vector2( 132, -128 )
+rotation = 0.0569979
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 130, -132 )
+
+[node name="Flower10" type="Sprite2D" parent="Flowers"]
+position = Vector2( 120, -160 )
+rotation = -0.00152844
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+startPos = Vector2( 118, -162 )
+
+[node name="Bugs" type="Node2D" parent="."]
+
+[node name="Insects" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( -180.551, 13.534 )
+rotation = 0.424115
+scale = Vector2( 0.433, 0.433 )
+
+[node name="Insects2" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( -27.615, -34.652 )
+rotation = -0.0855211
+scale = Vector2( 0.31, 0.31 )
+
+[node name="Insects3" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( -101.864, -199.141 )
+rotation = 0.0959931
+scale = Vector2( 0.464, 0.464 )
+
+[node name="Insects4" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( 137.892, -59.094 )
+rotation = 0.825541
+scale = Vector2( 0.391, 0.391 )
+
+[node name="Insects5" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( 114.148, -272.087 )
+rotation = -0.516617
+scale = Vector2( 0.555, 0.555 )
+
+[node name="Insects6" parent="Bugs" instance=ExtResource( 8 )]
+position = Vector2( 28.662, -125.457 )
+rotation = -0.581195
+scale = Vector2( 0.278, 0.278 )
+
+[node name="Plant" type="Area2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant"]
+position = Vector2( 1.16638, -3.32016 )
+shape = SubResource( 1 )
+
+[node name="Leaves" type="Node2D" parent="."]
+
+[node name="Colliders" type="Area2D" parent="Leaves"]
+visible = false
+
+[node name="Leaf0Collider" type="CollisionShape2D" parent="Leaves/Colliders"]
+position = Vector2( -179.431, -119.43 )
+rotation = -1.08726
+shape = SubResource( 2 )
+
+[node name="Leaf1Collider" type="CollisionShape2D" parent="Leaves/Colliders"]
+position = Vector2( 200.143, -309.858 )
+rotation = -0.552261
+scale = Vector2( 1.04329, 0.97076 )
+shape = SubResource( 3 )
+
+[node name="Leaf2Collider" type="CollisionShape2D" parent="Leaves/Colliders"]
+position = Vector2( 161.727, 60.8469 )
+rotation = -2.1679
+scale = Vector2( 0.828634, 0.745471 )
+shape = SubResource( 4 )
+
+[node name="Branch0" type="Sprite2D" parent="Leaves"]
+position = Vector2( -165.574, -127.854 )
+texture = ExtResource( 3 )
+
+[node name="Branch1" type="Sprite2D" parent="Leaves"]
+position = Vector2( 222, -315 )
+texture = ExtResource( 6 )
+
+[node name="Branch2" type="Sprite2D" parent="Leaves"]
+position = Vector2( 171.774, 52.2622 )
+texture = ExtResource( 5 )
+
+[node name="FallingLeaves" type="Node2D" parent="."]
+script = ExtResource( 9 )

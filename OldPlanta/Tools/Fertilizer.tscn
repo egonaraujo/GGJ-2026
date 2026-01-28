@@ -1,0 +1,36 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://qn11kelxycoe" path="res://OldPlanta/Tools/Tool.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cbexw2e0e1jw7" path="res://OldPlanta/Tools/ass-fertilizer.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://018pijvvu6u5" path="res://OldPlanta/Tools/highlight-purple.png" id="3"]
+[ext_resource type="Shader" uid="uid://48yqfhfxnvjp" path="res://OldPlanta/Tools/Outline.gdshader" id="4"]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/outline_color = null
+shader_param/enabled = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 246, 324 )
+
+[node name="Fertilizer" type="Node2D"]
+script = ExtResource( 1 )
+toolID = 0
+tool_asset = NodePath("ass-fertilizer")
+
+[node name="highlight" type="Sprite2D" parent="."]
+position = Vector2( 7.56302, -4.41174 )
+scale = Vector2( 6.4, 6.4 )
+texture = ExtResource( 3 )
+
+[node name="ass-fertilizer" type="Sprite2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 1.88365, 1.77922 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 12.8018, -7.86499 )
+shape = SubResource( 2 )

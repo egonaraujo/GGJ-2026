@@ -1,0 +1,188 @@
+[gd_scene format=2]
+
+[ext_resource type="Texture2D" uid="uid://dvsuv2ouwlq72" path="res://OldPlanta/Scenario/Tutorial/ass-risco-lateral@4x.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bfg3xis1nbqvs" path="res://OldPlanta/Scenario/Tutorial/ass-hand-lateral@4x.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://5205cykr5pws" path="res://OldPlanta/Scenario/Tutorial/ass-click@4x.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dj0vi3ciptc7h" path="res://OldPlanta/Scenario/Tutorial/ass-hand@4x.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cd35kktw6hqs1" path="res://OldPlanta/Scenario/Tutorial/tela-tutorial-1@4x.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dabwsl6f55g5e" path="res://OldPlanta/Scenario/Tutorial/tela-tutorial-2@4x.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ca6sdbjovegs1" path="res://OldPlanta/Scenario/Tutorial/btn-play@4x.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://d00yiwphkviau" path="res://OldPlanta/Scenario/Tutorial/tela-tutorial-3@4x.png" id="8"]
+[ext_resource type="Script" uid="uid://ceyalhc2f7o32" path="res://OldPlanta/Scenario/Tutorial/Tutorial.gd" id="9"]
+[ext_resource type="Texture2D" uid="uid://cnub5mcsh6clu" path="res://OldPlanta/Scenario/Tutorial/tela-tutorial-4@4x.png" id="10"]
+[ext_resource type="PackedScene" uid="uid://bfu13r78i3aqy" path="res://OldPlanta/Plants/Cactus/Cactus.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Scenario/Phases/Workstation/Workstation.tscn" id="12"]
+[ext_resource type="FontFile" uid="uid://dkscm5au8tccn" path="res://OldPlanta/Fonts/Chewy-Regular.ttf" id="13"]
+[ext_resource type="FontFile" path="res://OldPlanta/Fonts/Font_Chewy.tres" id="14"]
+[ext_resource type="Texture2D" uid="uid://phtjxbu1fkv1" path="res://OldPlanta/Scenario/Phases/Workstation/ps-background.png" id="15"]
+
+[sub_resource type="FontFile" id=1]
+font_path = "res://Fonts/Chewy-Regular.ttf"
+
+[sub_resource type="FontFile" id=2]
+size = 84
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="FontFile" id=3]
+size = 82
+outline_size = 3
+outline_color = Color( 1, 1, 1, 0 )
+use_filter = true
+font_data = ExtResource( 13 )
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGs" type="Node2D" parent="."]
+
+[node name="tutorial-1" type="Sprite2D" parent="BGs"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="tutorial-2" type="Sprite2D" parent="BGs"]
+visible = false
+texture = ExtResource( 6 )
+centered = false
+
+[node name="tutorial-3" type="Sprite2D" parent="BGs"]
+visible = false
+texture = ExtResource( 8 )
+centered = false
+
+[node name="tutorial-4" type="Sprite2D" parent="BGs"]
+visible = false
+texture = ExtResource( 10 )
+centered = false
+
+[node name="PlayScene" type="Sprite2D" parent="BGs"]
+visible = false
+self_modulate = Color( 0.388235, 0.388235, 0.470588, 1 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="hand-tilt" type="Sprite2D" parent="."]
+position = Vector2( 1422.63, 1050.37 )
+texture = ExtResource( 2 )
+
+[node name="hand-stroke" type="Sprite2D" parent="."]
+position = Vector2( 1343.94, 916.784 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="hand-upside" type="Sprite2D" parent="."]
+visible = false
+position = Vector2( 1632.77, 1074.13 )
+texture = ExtResource( 4 )
+
+[node name="hand-click" type="Sprite2D" parent="."]
+visible = false
+position = Vector2( 1602.38, 898.439 )
+texture = ExtResource( 3 )
+
+[node name="PracticeTutorial" type="Node2D" parent="."]
+visible = false
+
+[node name="Workstation" parent="PracticeTutorial" instance=ExtResource( 12 )]
+
+[node name="Cactus" parent="PracticeTutorial/Workstation/Plants" index="0" instance=ExtResource( 11 )]
+position = Vector2( 1577.52, 879.58 )
+active_position = Vector2( 1577.52, 879.58 )
+active_scale = Vector2( 1, 1 )
+
+[node name="btn-small-play" type="TextureButton" parent="."]
+visible = false
+offset_left = 1254.08
+offset_top = 380.742
+offset_right = 1642.08
+offset_bottom = 761.742
+scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextSkip" type="RichTextLabel" parent="."]
+offset_left = 2880.0
+offset_top = 56.0
+offset_right = 3152.0
+offset_bottom = 234.0
+theme_override_fonts/normal_font = SubResource( 2 )
+theme_override_colors/default_color = Color( 1, 0.529412, 0.482353, 1 )
+meta_underlined = false
+text = "pular"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProximoText" type="RichTextLabel" parent="."]
+offset_left = 2800.0
+offset_top = 1320.0
+offset_right = 3068.0
+offset_bottom = 1438.0
+theme_override_fonts/normal_font = SubResource( 3 )
+theme_override_colors/default_color = Color( 1, 0.529412, 0.482353, 1 )
+text = "próximo"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextBack" type="RichTextLabel" parent="."]
+offset_left = 160.0
+offset_top = 1320.0
+offset_right = 477.0
+offset_bottom = 1447.0
+clip_contents = false
+theme_override_fonts/normal_font = ExtResource( 14 )
+theme_override_colors/default_color = Color( 1, 0.529412, 0.482353, 1 )
+text = "anterior
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skip" type="TextureButton" parent="."]
+offset_left = 2697.0
+offset_top = 8.0
+offset_right = 3256.0
+offset_bottom = 246.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+offset_left = 2490.0
+offset_top = 1247.0
+offset_right = 3258.0
+offset_bottom = 1504.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Previsous" type="TextureButton" parent="."]
+offset_left = 6.0
+offset_top = 1276.0
+offset_right = 534.0
+offset_bottom = 1498.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn-small-play" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Skip" to="." method="_on_Skip_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Previsous" to="." method="_on_Previsous_pressed"]
+
+[editable path="PracticeTutorial/Workstation"]
+
+[editable path="PracticeTutorial/Workstation/Plants/Cactus"]

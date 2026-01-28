@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[ext_resource type="Texture2D" uid="uid://cegakago43qp6" path="res://OldPlanta/badge-success.png" id="1"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Scenario/CutScenes/Timer/Timer.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dt85l1btihc65" path="res://OldPlanta/Scenario/Menu/Menu.tscn" id="3"]
+[ext_resource type="Script" uid="uid://c6ym6gnuml8dg" path="res://OldPlanta/Scenario/CutScenes/CutSceneController.gd" id="4"]
+
+[node name="CutScene5" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level = 5
+
+[node name="Timer" parent="." instance=ExtResource( 2 )]
+next = ExtResource( 3 )
+
+[node name="badge-success" type="Sprite2D" parent="."]
+position = Vector2( 1544, 776 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )

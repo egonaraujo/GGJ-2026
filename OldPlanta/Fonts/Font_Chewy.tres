@@ -1,0 +1,10 @@
+[gd_resource type="FontFile" format=2]
+
+[ext_resource type="FontFile" uid="uid://dkscm5au8tccn" path="res://OldPlanta/Fonts/Chewy-Regular.ttf" id="1"]
+
+[resource]
+size = 84
+outline_color = Color( 1, 1, 1, 0 )
+use_filter = true
+extra_spacing_char = -2
+font_data = ExtResource( 1 )

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c0to2m4w0dgex"]
+
+[ext_resource type="Script" uid="uid://qn11kelxycoe" path="res://OldPlanta/Tools/Tool.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dp08mn7qahuw8" path="res://OldPlanta/Tools/ass-shears.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ccafy4opu4w5l" path="res://OldPlanta/Tools/highlight-orange.png" id="3"]
+[ext_resource type="Shader" uid="uid://48yqfhfxnvjp" path="res://OldPlanta/Tools/Outline.gdshader" id="4"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("4")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/enabled = true
+
+[sub_resource type="CapsuleShape2D" id="2"]
+radius = 182.0
+height = 560.0
+
+[node name="Shears" type="Node2D" unique_id=1865598428]
+script = ExtResource("1")
+toolID = 1
+tool_asset = NodePath("ass-shears")
+
+[node name="highlight" type="Sprite2D" parent="." unique_id=984199539]
+position = Vector2(1.2454, 8.70337)
+scale = Vector2(5.2, 5.2)
+texture = ExtResource("3")
+
+[node name="ass-shears" type="Sprite2D" parent="." unique_id=1914898027]
+material = SubResource("1")
+scale = Vector2(4, 4)
+texture = ExtResource("2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1977340963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1607123446]
+position = Vector2(0, 3.78252)
+rotation = 1.31338
+shape = SubResource("2")

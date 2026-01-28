@@ -1,0 +1,177 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://cxo5dbmst7r07" path="res://OldPlanta/Scenario/Phases/Workstation/Workstation.gd" id="1"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Tools/Fertilizer.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Tools/Watercan.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c0to2m4w0dgex" path="res://OldPlanta/Tools/Shears.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://OldPlanta/Tools/Bugspray.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://tt7frx2lutts" path="res://OldPlanta/Scenario/Phases/Workstation/ps-background-2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ckeb8ka0jo1hs" path="res://OldPlanta/Scenario/Phases/Workstation/ps-background-1.png" id="7"]
+[ext_resource type="AudioStream" uid="uid://dnyn0rj1sc2j7" path="res://OldPlanta/Scenario/Phases/Workstation/SprayLoop.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://bwmr5bi61psv4" path="res://OldPlanta/Scenario/Phases/Workstation/Watercan.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://ctdun5w3n7twj" path="res://OldPlanta/Scenario/Phases/Workstation/FertilizerShake.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://bj01sbr4542gn" path="res://OldPlanta/Scenario/Phases/Workstation/Slash.ogg" id="11"]
+[ext_resource type="Texture2D" uid="uid://bchedfse4mfi1" path="res://OldPlanta/Scenario/Phases/Workstation/ass-fertilizantexhdpi.png" id="12"]
+[ext_resource type="Script" uid="uid://cmcqkwt2cirs0" path="res://OldPlanta/Scenario/Phases/Workstation/TimeAlive.gd" id="13"]
+[ext_resource type="Texture2D" uid="uid://clcf0k22w4tqo" path="res://OldPlanta/Scenario/Phases/Workstation/ass-aguaxhdpi.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://8wy1d5mbbf5c" path="res://OldPlanta/Scenario/Phases/Workstation/ass-venenoxhdpi.png" id="15"]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.631868, 0.572727 ), 2.43315, 2.43315, 0, 0, Vector2( 0.9375, 0.963636 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -7.04794, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+colors = PackedColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticleProcessMaterial" id=4]
+lifetime_randomness = 0.4
+emission_shape = 1
+emission_sphere_radius = 120.0
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 24.31
+gravity = Vector3( 0, 150, 0 )
+initial_velocity = 35.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.45
+color_ramp = SubResource( 3 )
+
+[sub_resource type="Gradient" id=5]
+colors = PackedColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture2D" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="Curve" id=7]
+min_value = -200.0
+max_value = 300.0
+_data = [ Vector2( 0, 300 ), 0.0, 0.0, 0, 0, Vector2( 0.326087, 4.54544 ), -1161.62, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticleProcessMaterial" id=9]
+emission_shape = 1
+emission_sphere_radius = 50.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 300.0
+radial_accel_curve = SubResource( 8 )
+angle = 180.0
+angle_random = 1.0
+scale = 0.9
+scale_random = 0.5
+color_ramp = SubResource( 6 )
+
+[sub_resource type="Gradient" id=10]
+colors = PackedColorArray( 1, 1, 1, 1, 0.486275, 0.431373, 0.0705882, 0 )
+
+[sub_resource type="GradientTexture2D" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="ParticleProcessMaterial" id=12]
+emission_shape = 1
+emission_sphere_radius = 126.72
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 90.0
+gravity = Vector3( 0, 65, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.24
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 180.0
+angle_random = 1.0
+scale = 0.7
+color_ramp = SubResource( 11 )
+
+[node name="Workstation" type="Node2D"]
+script = ExtResource( 1 )
+SlashSound = ExtResource( 11 )
+SpraySound = ExtResource( 8 )
+WaterSound = ExtResource( 9 )
+FertilizerSound = ExtResource( 10 )
+trailLength = 20.0
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2( -2.76252, -1.2758 )
+scale = Vector2( 2.003, 2.003 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="ps-background2" type="Sprite2D" parent="."]
+position = Vector2( -1.79804, 0 )
+scale = Vector2( 2.003, 2.003 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="Fertilizer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 808.147, 584.365 )
+rotation = -0.341611
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Shears" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2332.22, 588.482 )
+rotation = -0.139285
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Watercan" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2338.29, 1216.9 )
+rotation = -0.249618
+scale = Vector2( 0.7, 0.7 )
+
+[node name="BugSpray" parent="." instance=ExtResource( 5 )]
+position = Vector2( 798.853, 1195.33 )
+rotation = 0.277418
+scale = Vector2( 0.7, 0.7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 1
+volume_db = -13.0
+
+[node name="ShearsTrailLine2D" type="Line2D" parent="."]
+width = 40.0
+width_curve = SubResource( 1 )
+default_color = Color( 1, 1, 1, 1 )
+joint_mode = 2
+
+[node name="WaterParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 30
+visibility_rect = Rect2( -500, -500, 1000, 1000 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 4 )
+texture = ExtResource( 14 )
+
+[node name="BugSprayParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 80
+randomness = 0.3
+visibility_rect = Rect2( -500, -500, 1000, 1000 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 9 )
+texture = ExtResource( 15 )
+
+[node name="FertilizerSprayParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 60
+lifetime = 1.8
+one_shot = true
+explosiveness = 0.95
+randomness = 0.3
+visibility_rect = Rect2( -500, -500, 1000, 1000 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 12 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
