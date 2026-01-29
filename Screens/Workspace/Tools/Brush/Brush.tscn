@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://j7p3txwr3q16"]
+
+[ext_resource type="Script" uid="uid://bb1kwel0yy4sh" path="res://Screens/Workspace/Tools/Brush/brush.gd" id="1_sly5i"]
+[ext_resource type="Texture2D" uid="uid://btklvh8wag0fu" path="res://OldPlanta/BasicAssets/Square.png" id="2_5dycy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2061"]
+size = Vector2(242.5, 82.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5l7k"]
+radius = 25.0
+
+[node name="Brush" type="Node2D" unique_id=1971679094 node_paths=PackedStringArray("button", "collisionDetection")]
+script = ExtResource("1_sly5i")
+button = NodePath("Button")
+collisionDetection = NodePath("CollisionDetection")
+toolType = 1
+
+[node name="Button" type="Area2D" parent="." unique_id=1022900649]
+
+[node name="Square" type="Sprite2D" parent="Button" unique_id=1761464683]
+position = Vector2(124, 650.5)
+scale = Vector2(1, 0.34)
+texture = ExtResource("2_5dycy")
+
+[node name="Label" type="Label" parent="Button" unique_id=1060606751]
+offset_left = 13.0
+offset_top = 632.0
+offset_right = 238.0
+offset_bottom = 674.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Pincel"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=648898910]
+position = Vector2(122.75, 650.75)
+shape = SubResource("RectangleShape2D_v2061")
+
+[node name="CollisionDetection" type="Area2D" parent="." unique_id=536181149]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetection" unique_id=852540915]
+shape = SubResource("CircleShape2D_i5l7k")

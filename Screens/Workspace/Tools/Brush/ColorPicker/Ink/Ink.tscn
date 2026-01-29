@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxhmohib7vsmb"]
 
-[ext_resource type="Script" uid="uid://bm40by1r21e7b" path="res://Screens/Prototype/ColorPicker/Ink/ink.gd" id="1_5860p"]
+[ext_resource type="Script" uid="uid://bm40by1r21e7b" path="res://Screens/Workspace/Tools/Brush/ColorPicker/Ink/ink.gd" id="1_5860p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h7jl3"]
 

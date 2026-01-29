@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ciiuk736i8y1b" path="res://OldPlanta/BasicAssets/Circle.png" id="3_1o61p"]
 [ext_resource type="PackedScene" uid="uid://c05ufoa8i8n8t" path="res://Screens/Workspace/Tools/CleaningRag/Dirt.tscn" id="4_1o61p"]
 [ext_resource type="PackedScene" uid="uid://dva7lmmoljtph" path="res://Screens/Workspace/Tools/CleaningRag/CleaningRag.tscn" id="5_v2hbv"]
+[ext_resource type="PackedScene" uid="uid://j7p3txwr3q16" path="res://Screens/Workspace/Tools/Brush/Brush.tscn" id="6_v2hbv"]
+[ext_resource type="PackedScene" uid="uid://rkgb4wchfrda" path="res://Screens/Workspace/Tools/Brush/PaintingCanvas.tscn" id="7_0qtcr"]
 
 [node name="Workspace" type="Node2D" unique_id=1722039641]
 script = ExtResource("1_y70hp")
@@ -35,3 +37,9 @@ scale = Vector2(2.0730264, 2.3042352)
 [node name="Tools" type="Node" parent="." unique_id=230277893]
 
 [node name="CleaningRag" parent="Tools" unique_id=1971679094 instance=ExtResource("5_v2hbv")]
+
+[node name="Brush" parent="Tools" unique_id=708208047 instance=ExtResource("6_v2hbv")]
+
+[node name="BrushArea" type="Node2D" parent="." unique_id=1544073172]
+
+[node name="PaintingCanvas" parent="BrushArea" unique_id=719413976 instance=ExtResource("7_0qtcr")]
