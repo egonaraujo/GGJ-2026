@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dva7lmmoljtph"]
+
+[ext_resource type="Script" uid="uid://3uw3a8g2rcat" path="res://Screens/Workspace/Tools/CleaningRag/cleaning_rag.gd" id="1_p3byu"]
+[ext_resource type="Texture2D" uid="uid://btklvh8wag0fu" path="res://OldPlanta/BasicAssets/Square.png" id="2_i5l7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2061"]
+size = Vector2(242.5, 82.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5l7k"]
+radius = 25.0
+
+[node name="CleaningRag" type="Node2D" unique_id=1971679094 node_paths=PackedStringArray("button", "collisionDetection")]
+script = ExtResource("1_p3byu")
+button = NodePath("Button")
+collisionDetection = NodePath("CollisionDetection")
+toolType = 1
+
+[node name="Button" type="Area2D" parent="." unique_id=1022900649]
+
+[node name="Square" type="Sprite2D" parent="Button" unique_id=1761464683]
+position = Vector2(126, 518.5)
+scale = Vector2(1, 0.34)
+texture = ExtResource("2_i5l7k")
+
+[node name="Label" type="Label" parent="Button" unique_id=1060606751]
+offset_left = 15.0
+offset_top = 500.0
+offset_right = 240.0
+offset_bottom = 537.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Pano de limpeza"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=648898910]
+position = Vector2(124.75, 518.75)
+shape = SubResource("RectangleShape2D_v2061")
+
+[node name="CollisionDetection" type="Area2D" parent="." unique_id=536181149]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetection" unique_id=852540915]
+shape = SubResource("CircleShape2D_i5l7k")

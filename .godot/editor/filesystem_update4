@@ -1,2 +1,9 @@
 res://OldPlanta/default_env.tres
+res://Screens/Workspace/Tools/CleaningRag/CleaningRag.tscn
+res://Screens/Workspace/Tools/CleaningRag/cleaning_rag.gd
+res://Screens/Workspace/Tools/tools_base.gd
+res://Screens/Workspace/Tools/CleaningRag/Dirt.tscn
+res://Screens/Workspace/Tools/CleaningRag/dirt.gd
+res://Screens/Workspace/Workspace.tscn
 res://Screens/Workspace/workspace.gd
+res://Screens/MainMenu/main_menu.gd

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://buk8dpsjuao87"]
+
+[ext_resource type="Script" uid="uid://cuvb0k383fw07" path="res://Screens/Enciclopedia/enciclopedia.gd" id="1_32gdr"]
+[ext_resource type="Texture2D" uid="uid://nyy8mjaf5i25" path="res://MockScreens/enciclopedia.png" id="1_ntrik"]
+
+[node name="Enciclopedia" type="Control" unique_id=1092937309]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_32gdr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=749523592]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_ntrik")
+
+[node name="CloseButton" type="Button" parent="." unique_id=721964299]
+layout_mode = 0
+offset_left = 1463.0
+offset_top = 69.0
+offset_right = 1629.0
+offset_bottom = 240.0
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

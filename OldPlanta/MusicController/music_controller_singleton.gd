@@ -19,7 +19,7 @@ var current_timer = 0
 var fade_in = false
 
 func _ready():
-	menu_music = preload("res://OldPlanta/MusicController/main_menu.ogg")
+	menu_music = preload("res://Sounds/jam26.mp3")
 	lose_music = preload("res://OldPlanta/MusicController/lose.ogg")
 	phase1_music = preload("res://OldPlanta/MusicController/phase_1.ogg")
 	phase2_music = preload("res://OldPlanta/MusicController/phase_2.ogg")
@@ -28,9 +28,10 @@ func _ready():
 	phase5_music = preload("res://OldPlanta/MusicController/phase_5.ogg")
 	next_stream = menu_music
 	current_stream = menu_music
-	$MusicPlayer.volume_db=target_volume
 	$MusicPlayer.stream = next_stream
 	$MusicPlayer.play()
+	$MusicPlayer.volume_db = target_volume
+
 	set_process(true)
 	pass # Replace with function body.
 

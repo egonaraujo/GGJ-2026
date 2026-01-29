@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://byvihowumd2lk"]
+
+[ext_resource type="StyleBox" uid="uid://d5egdmtd0gg4" path="res://MockScreens/HiddenButtonNormal.tres" id="1_yfe7k"]
+
+[resource]
+Button/styles/hover = ExtResource("1_yfe7k")
+Button/styles/normal = ExtResource("1_yfe7k")
+Button/styles/pressed = ExtResource("1_yfe7k")

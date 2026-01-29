@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://drxbmd44h4o8g" path="res://Screens/Workspace/workspace.gd" id="1_y70hp"]
 [ext_resource type="Texture2D" uid="uid://btklvh8wag0fu" path="res://OldPlanta/BasicAssets/Square.png" id="2_ic14f"]
 [ext_resource type="Texture2D" uid="uid://ciiuk736i8y1b" path="res://OldPlanta/BasicAssets/Circle.png" id="3_1o61p"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_v2hbv"]
-radius = 118.42297
+[ext_resource type="PackedScene" uid="uid://c05ufoa8i8n8t" path="res://Screens/Workspace/Tools/CleaningRag/Dirt.tscn" id="4_1o61p"]
+[ext_resource type="PackedScene" uid="uid://dva7lmmoljtph" path="res://Screens/Workspace/Tools/CleaningRag/CleaningRag.tscn" id="5_v2hbv"]
 
 [node name="Workspace" type="Node2D" unique_id=1722039641]
 script = ExtResource("1_y70hp")
@@ -23,70 +22,16 @@ texture = ExtResource("3_1o61p")
 
 [node name="Dirts" type="Node" parent="." unique_id=1815237062]
 
-[node name="Dirt" type="Sprite2D" parent="Dirts" unique_id=1448542844]
-modulate = Color(0.23384863, 0.11847373, 0.011297575, 0.54901963)
-position = Vector2(709.0514, 406.30768)
-rotation = -0.26908118
-scale = Vector2(0.81433636, 0.67030966)
-texture = ExtResource("3_1o61p")
+[node name="Dirt" parent="Dirts" unique_id=1147548903 instance=ExtResource("4_1o61p")]
+position = Vector2(706, 456)
+rotation = 0.48162797
+scale = Vector2(2.0730264, 2.3042352)
 
-[node name="Area2D" type="Area2D" parent="Dirts/Dirt" unique_id=42909308]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dirts/Dirt/Area2D" unique_id=1863329094]
-shape = SubResource("CircleShape2D_v2hbv")
-metadata/_edit_lock_ = true
-
-[node name="Dirt2" type="Sprite2D" parent="Dirts" unique_id=461963043]
-modulate = Color(0.23384863, 0.11847373, 0.011297575, 0.54901963)
-position = Vector2(1091, 400)
-rotation = 0.2819696
-scale = Vector2(0.81433636, 0.67030966)
-texture = ExtResource("3_1o61p")
-
-[node name="Area2D" type="Area2D" parent="Dirts/Dirt2" unique_id=492960256]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dirts/Dirt2/Area2D" unique_id=1754583742]
-shape = SubResource("CircleShape2D_v2hbv")
-metadata/_edit_lock_ = true
-
-[node name="Dirt3" type="Sprite2D" parent="Dirts" unique_id=1455915765]
-modulate = Color(0.23384863, 0.11847373, 0.011297575, 0.54901963)
-position = Vector2(939, 591)
-rotation = -0.02138777
-scale = Vector2(0.81433636, 0.67030966)
-texture = ExtResource("3_1o61p")
-
-[node name="Area2D" type="Area2D" parent="Dirts/Dirt3" unique_id=1169192701]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dirts/Dirt3/Area2D" unique_id=1062195126]
-shape = SubResource("CircleShape2D_v2hbv")
-metadata/_edit_lock_ = true
+[node name="Dirt2" parent="Dirts" unique_id=367968168 instance=ExtResource("4_1o61p")]
+position = Vector2(999, 389.00003)
+rotation = -0.8861741
+scale = Vector2(2.0730264, 2.3042352)
 
 [node name="Tools" type="Node" parent="." unique_id=230277893]
 
-[node name="CleaningRag" type="Sprite2D" parent="Tools" unique_id=727833499]
-modulate = Color(0.63473225, 0.22900882, 0.30708, 1)
-position = Vector2(273, 580)
-texture = ExtResource("3_1o61p")
-
-[node name="Area2D" type="Area2D" parent="Tools/CleaningRag" unique_id=505244236]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tools/CleaningRag/Area2D" unique_id=1215622944]
-shape = SubResource("CircleShape2D_v2hbv")
-metadata/_edit_lock_ = true
-
-[node name="Chisel" type="Sprite2D" parent="Tools" unique_id=848662858]
-modulate = Color(0.43673104, 0.39450762, 0.04512231, 1)
-position = Vector2(349, 831)
-texture = ExtResource("3_1o61p")
-
-[node name="Area2D" type="Area2D" parent="Tools/Chisel" unique_id=2009610296]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tools/Chisel/Area2D" unique_id=257413708]
-shape = SubResource("CircleShape2D_v2hbv")
-metadata/_edit_lock_ = true
+[node name="CleaningRag" parent="Tools" unique_id=1971679094 instance=ExtResource("5_v2hbv")]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bkb300xibpjhb"]
+
+[ext_resource type="Script" uid="uid://bsdw2lujkh2oh" path="res://Screens/Credits/credits.gd" id="1_qdsau"]
+[ext_resource type="Texture2D" uid="uid://ms0k6fm4oxgq" path="res://MockScreens/Creditos.png" id="2_xuxid"]
+
+[node name="Credits" type="Control" unique_id=1299264435]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qdsau")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1270946415]
+layout_mode = 0
+offset_right = 1920.5272
+offset_bottom = 1084.0
+texture = ExtResource("2_xuxid")
+
+[node name="BackButton" type="Button" parent="." unique_id=950418057]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 43.0
+offset_right = 379.0
+offset_bottom = 144.0
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

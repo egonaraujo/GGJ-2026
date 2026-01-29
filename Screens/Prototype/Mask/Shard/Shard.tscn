@@ -6,7 +6,6 @@
 
 [node name="Shard" type="Node2D" unique_id=1636635879]
 script = ExtResource("1_7rd2d")
-fog_color = Color(0.49803922, 0.49803922, 0.49803922, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=238389369]
 
