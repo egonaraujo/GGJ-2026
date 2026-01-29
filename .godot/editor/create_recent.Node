@@ -1,9 +1,0 @@
-CollisionShape2D
-Area2D
-Node2D
-Label
-StaticBody2D
-Button
-TextureRect
-Control
-Node
