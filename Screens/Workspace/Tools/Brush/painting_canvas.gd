@@ -24,3 +24,6 @@ func _on_ink_selected(chosen: Node2D):
 
 func _on_shard_painted(shard: Node2D):
 	shard.apply_ink(self._chosen_ink);
+
+func change_ink_visibility(showColors: bool):
+	$ColorPicker.visible = showColors

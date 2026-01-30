@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://kbhnl8t8hs3v"]
+
+[ext_resource type="Script" uid="uid://ciuc2wfk74g5i" path="res://Screens/Workspace/Mask/Shard/shard.gd" id="1_7rd2d"]
+
+[node name="Shard" type="Node2D" unique_id=1636635879]
+script = ExtResource("1_7rd2d")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=173381894]
+texture_filter = 1
+texture_repeat = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=238389369]
+collision_layer = 4
+collision_mask = 4
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

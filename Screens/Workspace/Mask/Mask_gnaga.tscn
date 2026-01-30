@@ -1,0 +1,326 @@
+[gd_scene format=3 uid="uid://b3vm3jj0odnmk"]
+
+[ext_resource type="Script" uid="uid://xy2qnsflbyp3" path="res://Screens/Workspace/Mask/mask.gd" id="1_nl6bg"]
+[ext_resource type="PackedScene" uid="uid://kbhnl8t8hs3v" path="res://Screens/Workspace/Mask/Shard/Shard.tscn" id="2_o6b88"]
+[ext_resource type="Texture2D" uid="uid://b1t7vmu7wsto2" path="res://FinalAssets/mascara gnaga 1x/pedaço 1.png" id="3_ecf3r"]
+[ext_resource type="Texture2D" uid="uid://ddyywpprb3qw" path="res://FinalAssets/mascara gnaga 1x/pedaço 2.png" id="4_lipmk"]
+[ext_resource type="Texture2D" uid="uid://to880uew1gkt" path="res://FinalAssets/mascara gnaga 1x/pedaço 3.png" id="5_4bxj6"]
+[ext_resource type="Texture2D" uid="uid://dyrbp1ctmn7xm" path="res://FinalAssets/mascara gnaga 1x/pedaço 4.png" id="6_tuai6"]
+[ext_resource type="Texture2D" uid="uid://lspyqi2h003m" path="res://FinalAssets/mascara gnaga 1x/pedaço 5.png" id="7_wcj40"]
+[ext_resource type="Texture2D" uid="uid://bafy727o111fl" path="res://FinalAssets/mascara gnaga 1x/pedaço 6.png" id="8_ot56q"]
+[ext_resource type="Texture2D" uid="uid://cf77yvh3hynnq" path="res://FinalAssets/mascara gnaga 1x/pedaço 10.png" id="9_fsicd"]
+[ext_resource type="Texture2D" uid="uid://c37f2o7jp7q2e" path="res://FinalAssets/mascara gnaga 1x/pedaço 11.png" id="10_44iry"]
+[ext_resource type="Texture2D" uid="uid://dfumrtsloj26k" path="res://FinalAssets/mascara gnaga 1x/pedaço 12.png" id="11_1pxs7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g5lpo"]
+radius = 4.0
+height = 42.176895
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxhst"]
+radius = 4.0
+height = 17.856415
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2amtc"]
+radius = 4.4641037
+height = 27.184616
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6snl6"]
+radius = 4.830124
+height = 54.569214
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhnxm"]
+radius = 4.381363
+height = 41.22523
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htk8x"]
+radius = 12.0
+height = 33.497803
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6x10t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dyqvn"]
+radius = 8.485275
+height = 35.355347
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0217"]
+radius = 10.606602
+height = 42.426453
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_od3ae"]
+radius = 11.66024
+height = 34.24875
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_npuyp"]
+radius = 4.964102
+height = 11.660248
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qefxn"]
+radius = 2.828415
+height = 14.142143
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bicep"]
+radius = 2.9999924
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6v5w"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ni2pj"]
+radius = 1.4142135
+
+[node name="Mask" type="Node2D" unique_id=401451404]
+script = ExtResource("1_nl6bg")
+
+[node name="Shards" type="Node2D" parent="." unique_id=1129504359]
+
+[node name="Shard0" parent="Shards" unique_id=1636635879 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard0" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("3_ecf3r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard0/Area2D" parent_id_path=PackedInt32Array(1636635879, 238389369) index="0" unique_id=319669294]
+position = Vector2(84, 81)
+shape = SubResource("CapsuleShape2D_g5lpo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Shards/Shard0/Area2D" parent_id_path=PackedInt32Array(1636635879, 238389369) index="1" unique_id=1167384080]
+position = Vector2(92, 63)
+rotation = -1.0471976
+shape = SubResource("CapsuleShape2D_oxhst")
+
+[node name="Shard2" parent="Shards" unique_id=844947390 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard2" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("4_lipmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard2/Area2D" parent_id_path=PackedInt32Array(844947390, 238389369) index="0" unique_id=82936968]
+position = Vector2(112, 75)
+rotation = -1.0471976
+shape = SubResource("CapsuleShape2D_2amtc")
+
+[node name="Shard3" parent="Shards" unique_id=1801131871 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard3" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("5_4bxj6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard3/Area2D" parent_id_path=PackedInt32Array(1801131871, 238389369) index="0" unique_id=1637808339]
+position = Vector2(150, 71)
+rotation = -2.0943952
+shape = SubResource("CapsuleShape2D_6snl6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard3/Area2D" parent_id_path=PackedInt32Array(1801131871, 238389369) index="1" unique_id=1157156766]
+position = Vector2(172, 83)
+rotation = -2.8797934
+shape = SubResource("CapsuleShape2D_fhnxm")
+
+[node name="Shard4" parent="Shards" unique_id=78664389 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard4" index="0" unique_id=173381894]
+position = Vector2(160, 127)
+texture = ExtResource("6_tuai6")
+offset = Vector2(0, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard4/Area2D" parent_id_path=PackedInt32Array(78664389, 238389369) index="0" unique_id=1987485695]
+position = Vector2(166, 139)
+rotation = -2.0943952
+shape = SubResource("CapsuleShape2D_htk8x")
+
+[node name="Shard5" parent="Shards" unique_id=2073196344 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard5" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("7_wcj40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard5/Area2D" parent_id_path=PackedInt32Array(2073196344, 238389369) index="0" unique_id=1456850505]
+position = Vector2(119.000015, 137.00002)
+rotation = 0.7853982
+shape = SubResource("CapsuleShape2D_6x10t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard5/Area2D" parent_id_path=PackedInt32Array(2073196344, 238389369) index="1" unique_id=1312401964]
+position = Vector2(136, 138)
+rotation = -3.926991
+shape = SubResource("CapsuleShape2D_dyqvn")
+
+[node name="Shard6" parent="Shards" unique_id=1806411158 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -40)
+
+[node name="Sprite" parent="Shards/Shard6" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("8_ot56q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard6/Area2D" parent_id_path=PackedInt32Array(1806411158, 238389369) index="0" unique_id=131295335]
+position = Vector2(91, 136.00002)
+rotation = 2.3561945
+shape = SubResource("CapsuleShape2D_g0217")
+
+[node name="Shard7" parent="Shards" unique_id=1571262894 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -38)
+
+[node name="Sprite" parent="Shards/Shard7" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("9_fsicd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard7/Area2D" parent_id_path=PackedInt32Array(1571262894, 238389369) index="0" unique_id=1514024791]
+position = Vector2(102.999985, 108.99999)
+rotation = 3.926991
+shape = SubResource("CapsuleShape2D_od3ae")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard7/Area2D" parent_id_path=PackedInt32Array(1571262894, 238389369) index="1" unique_id=950203178]
+position = Vector2(153, 108.00002)
+rotation = 2.6179938
+shape = SubResource("CapsuleShape2D_od3ae")
+
+[node name="Shard8" parent="Shards" unique_id=650061426 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -38)
+
+[node name="Sprite" parent="Shards/Shard8" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("10_44iry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="0" unique_id=1953515073]
+position = Vector2(92, 72)
+rotation = 5.2359877
+shape = SubResource("CapsuleShape2D_npuyp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="1" unique_id=1592697338]
+position = Vector2(164.00002, 70)
+rotation = 7.0685835
+shape = SubResource("CapsuleShape2D_npuyp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="2" unique_id=742717610]
+position = Vector2(150, 84)
+rotation = 6.021386
+shape = SubResource("CapsuleShape2D_npuyp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="3" unique_id=1097532687]
+position = Vector2(106, 84)
+rotation = 6.544985
+shape = SubResource("CapsuleShape2D_npuyp")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="4" unique_id=1035336784]
+position = Vector2(128, 116)
+rotation = 7.853982
+shape = SubResource("CapsuleShape2D_npuyp")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="5" unique_id=1603242481]
+position = Vector2(122.00001, 90)
+rotation = 7.0685835
+shape = SubResource("CapsuleShape2D_qefxn")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="6" unique_id=475635076]
+position = Vector2(135, 90)
+rotation = 5.759587
+shape = SubResource("CapsuleShape2D_qefxn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="7" unique_id=2096438507]
+position = Vector2(128, 101.00001)
+rotation = 7.853982
+shape = SubResource("CapsuleShape2D_qefxn")
+
+[node name="Shard9" parent="Shards" unique_id=2078364211 instance=ExtResource("2_o6b88")]
+position = Vector2(0, -38)
+
+[node name="Sprite" parent="Shards/Shard9" index="0" unique_id=173381894]
+position = Vector2(128, 106)
+texture = ExtResource("11_1pxs7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="0" unique_id=341589498]
+position = Vector2(128, 95)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_bicep")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="1" unique_id=2095772798]
+position = Vector2(128, 108)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_t6v5w")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="2" unique_id=1996436108]
+position = Vector2(159, 81)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_t6v5w")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="3" unique_id=1277610451]
+position = Vector2(97.00001, 81)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_t6v5w")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="4" unique_id=870159964]
+position = Vector2(86, 102)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_t6v5w")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="5" unique_id=37478989]
+position = Vector2(169, 102)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_t6v5w")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="6" unique_id=1813503510]
+position = Vector2(173, 114)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="7" unique_id=746258480]
+position = Vector2(173, 114)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="8" unique_id=1365506941]
+position = Vector2(155, 127)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="9" unique_id=318227570]
+position = Vector2(142, 88)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="10" unique_id=2135090310]
+position = Vector2(114, 88)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="11" unique_id=650974976]
+position = Vector2(83, 114)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="12" unique_id=1986924234]
+position = Vector2(101, 127)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="13" unique_id=322229516]
+position = Vector2(118, 116)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="14" unique_id=1695686746]
+position = Vector2(137, 116)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="15" unique_id=842909573]
+position = Vector2(143, 89)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="16" unique_id=802820027]
+position = Vector2(113, 89)
+rotation = 3.1415927
+shape = SubResource("CircleShape2D_ni2pj")
+
+[editable path="Shards/Shard0"]
+[editable path="Shards/Shard2"]
+[editable path="Shards/Shard3"]
+[editable path="Shards/Shard4"]
+[editable path="Shards/Shard5"]
+[editable path="Shards/Shard6"]
+[editable path="Shards/Shard7"]
+[editable path="Shards/Shard8"]
+[editable path="Shards/Shard9"]

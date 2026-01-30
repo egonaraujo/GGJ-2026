@@ -1,87 +1,108 @@
 [gd_scene format=3 uid="uid://bu5r10ma4cqcs"]
 
 [ext_resource type="Script" uid="uid://drxbmd44h4o8g" path="res://Screens/Workspace/workspace.gd" id="1_y70hp"]
-[ext_resource type="Texture2D" uid="uid://btklvh8wag0fu" path="res://OldPlanta/BasicAssets/Square.png" id="2_ic14f"]
-[ext_resource type="Texture2D" uid="uid://ciiuk736i8y1b" path="res://OldPlanta/BasicAssets/Circle.png" id="3_1o61p"]
+[ext_resource type="Texture2D" uid="uid://bl7ngp0g0bpub" path="res://FinalAssets/BG-cena-principal.png" id="2_0qtcr"]
 [ext_resource type="PackedScene" uid="uid://c05ufoa8i8n8t" path="res://Screens/Workspace/Tools/CleaningRag/Dirt.tscn" id="4_1o61p"]
-[ext_resource type="PackedScene" uid="uid://rkgb4wchfrda" path="res://Screens/Workspace/Tools/Brush/PaintingCanvas.tscn" id="7_0qtcr"]
+[ext_resource type="PackedScene" uid="uid://dq0xxm8gwuep0" path="res://Screens/Workspace/Tools/Chisel/Rock.tscn" id="4_v2hbv"]
+[ext_resource type="Texture2D" uid="uid://bv0imtp8cdrgo" path="res://FinalAssets/Obj-pincel.png" id="6_0bnau"]
+[ext_resource type="Texture2D" uid="uid://ct0a287kbfb3l" path="res://FinalAssets/Obj-espatula.png" id="7_0bnau"]
+[ext_resource type="PackedScene" uid="uid://rkgb4wchfrda" path="res://Screens/Workspace/Tools/Brush/PaintingCanvas_gnaga.tscn" id="7_0qtcr"]
+[ext_resource type="Texture2D" uid="uid://cfjs6f4diqsap" path="res://FinalAssets/Obj-flanela.png" id="8_0cm6y"]
+[ext_resource type="Texture2D" uid="uid://vyg24dc06c46" path="res://FinalAssets/Obj- dremel.png" id="9_j8umi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2061"]
-size = Vector2(242.5, 82.5)
+size = Vector2(78.8125, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5l7k"]
-radius = 25.0
+radius = 2.0
 
 [node name="Workspace" type="Node2D" unique_id=1722039641]
 script = ExtResource("1_y70hp")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=524234974]
-modulate = Color(0.2963641, 0.6953279, 0.717659, 1)
-position = Vector2(963, 540)
-scale = Vector2(7.6800003, 4.3199997)
-texture = ExtResource("2_ic14f")
-
-[node name="Mask" type="Sprite2D" parent="." unique_id=1639103889]
-position = Vector2(921, 465)
-scale = Vector2(2.936, 1.78)
-texture = ExtResource("3_1o61p")
-
-[node name="Dirts" type="Node" parent="." unique_id=1815237062]
-
-[node name="Dirt" parent="Dirts" unique_id=1147548903 instance=ExtResource("4_1o61p")]
-position = Vector2(706, 456)
-rotation = 0.48162797
-scale = Vector2(2.0730264, 2.3042352)
-
-[node name="Dirt2" parent="Dirts" unique_id=367968168 instance=ExtResource("4_1o61p")]
-position = Vector2(999, 389.00003)
-rotation = -0.8861741
-scale = Vector2(2.0730264, 2.3042352)
+[node name="BgCenaPrincipal" type="Sprite2D" parent="." unique_id=1183617162]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(128, 72)
+texture = ExtResource("2_0qtcr")
 
 [node name="BrushArea" type="Node2D" parent="." unique_id=1544073172]
 
 [node name="PaintingCanvas" parent="BrushArea" unique_id=719413976 instance=ExtResource("7_0qtcr")]
 
+[node name="Rocks" type="Node2D" parent="." unique_id=543102453]
+
+[node name="Rock" parent="Rocks" unique_id=1147548903 instance=ExtResource("4_v2hbv")]
+position = Vector2(108, 71.99999)
+rotation = 0.90060395
+scale = Vector2(0.29431078, 0.31837335)
+
+[node name="Rock2" parent="Rocks" unique_id=1367430597 instance=ExtResource("4_v2hbv")]
+position = Vector2(144, 56)
+scale = Vector2(0.329633, 0.329633)
+
+[node name="Dirts" type="Node2D" parent="." unique_id=1406832376]
+
+[node name="Dirt" parent="Dirts" unique_id=1614959803 instance=ExtResource("4_1o61p")]
+position = Vector2(115, 103.99999)
+rotation = 0.9205374
+scale = Vector2(0.37475628, 0.37475628)
+
+[node name="Dirt2" parent="Dirts" unique_id=367968168 instance=ExtResource("4_1o61p")]
+position = Vector2(112.000015, 48.000004)
+rotation = -0.8861741
+scale = Vector2(0.3633074, 0.3633074)
+
 [node name="ToolSelection" type="Node2D" parent="." unique_id=542192761]
 
-[node name="ToolBrush" type="Area2D" parent="ToolSelection" unique_id=423841146]
-position = Vector2(113.45203, 635.6354)
-
-[node name="Square" type="Sprite2D" parent="ToolSelection/ToolBrush" unique_id=1895390701]
-scale = Vector2(1, 0.34)
-texture = ExtResource("2_ic14f")
-
-[node name="Label" type="Label" parent="ToolSelection/ToolBrush" unique_id=1437256678]
-offset_left = -120.0
-offset_top = -24.0
-offset_right = 118.0
-offset_bottom = 18.0
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Pincel"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolBrush" unique_id=1653534324]
-shape = SubResource("RectangleShape2D_v2061")
-
 [node name="ToolRag" type="Area2D" parent="ToolSelection" unique_id=1226628870]
-position = Vector2(111, 768)
+position = Vector2(20, 46)
 
-[node name="Square" type="Sprite2D" parent="ToolSelection/ToolRag" unique_id=267552805]
-scale = Vector2(1, 0.34)
-texture = ExtResource("2_ic14f")
-
-[node name="Label" type="Label" parent="ToolSelection/ToolRag" unique_id=2064447312]
-offset_left = -120.0
-offset_top = -24.0
-offset_right = 118.0
-offset_bottom = 18.0
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Pano de limpeza"
+[node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolRag" unique_id=1574540122]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(7, 0.9999989)
+scale = Vector2(0.8703704, 0.87037027)
+texture = ExtResource("8_0cm6y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolRag" unique_id=1296103077]
+position = Vector2(9, 0)
+shape = SubResource("RectangleShape2D_v2061")
+
+[node name="ToolChisel" type="Area2D" parent="ToolSelection" unique_id=1123302590]
+position = Vector2(20, 73)
+
+[node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolChisel" unique_id=454401958]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("9_j8umi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolChisel" unique_id=1192737098]
+position = Vector2(9, 0)
+shape = SubResource("RectangleShape2D_v2061")
+
+[node name="ToolSpatula" type="Area2D" parent="ToolSelection" unique_id=1681690213]
+position = Vector2(20, 98)
+
+[node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolSpatula" unique_id=1454312307]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("7_0bnau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolSpatula" unique_id=1232628504]
+position = Vector2(8.59375, -1.0000038)
+shape = SubResource("RectangleShape2D_v2061")
+
+[node name="ToolBrush" type="Area2D" parent="ToolSelection" unique_id=423841146]
+position = Vector2(20, 124)
+
+[node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolBrush" unique_id=1895390701]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("6_0bnau")
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolBrush" unique_id=1653534324]
+position = Vector2(8.59375, -1.0000038)
 shape = SubResource("RectangleShape2D_v2061")
 
 [node name="CollisionDetection" type="Area2D" parent="." unique_id=536181149]
@@ -92,12 +113,24 @@ shape = SubResource("CircleShape2D_i5l7k")
 [node name="Rag" type="Polygon2D" parent="CollisionDetection" unique_id=129199561]
 visible = false
 color = Color(0, 1, 0.8688135, 1)
-polygon = PackedVector2Array(100, 0, 0, -100, -100, 0)
+polygon = PackedVector2Array(11, 0, 0, -29, -9, 0)
 
 [node name="Brush" type="Polygon2D" parent="CollisionDetection" unique_id=305955812]
 visible = false
 color = Color(1, 0.7621899, 0, 1)
-polygon = PackedVector2Array(100, 0, 0, 100, -100, 0)
+polygon = PackedVector2Array(10, 0, 1, 14, -9, 1)
 
-[connection signal="input_event" from="ToolSelection/ToolBrush" to="." method="_on_tool_brush_input_event"]
+[node name="Chisel" type="Polygon2D" parent="CollisionDetection" unique_id=107155002]
+visible = false
+color = Color(0.8485521, 0, 0.09034794, 1)
+polygon = PackedVector2Array(0, 4, -10, 0, 0, -6)
+
+[node name="Spatula" type="Polygon2D" parent="CollisionDetection" unique_id=1918643586]
+visible = false
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, 0, 0, 4, 0, -5)
+
 [connection signal="input_event" from="ToolSelection/ToolRag" to="." method="_on_tool_rag_input_event"]
+[connection signal="input_event" from="ToolSelection/ToolChisel" to="." method="_on_tool_chisel_input_event"]
+[connection signal="input_event" from="ToolSelection/ToolSpatula" to="." method="_on_tool_spatula_input_event"]
+[connection signal="input_event" from="ToolSelection/ToolBrush" to="." method="_on_tool_brush_input_event"]

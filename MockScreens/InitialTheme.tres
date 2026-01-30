@@ -6,3 +6,4 @@
 Button/styles/hover = ExtResource("1_yfe7k")
 Button/styles/normal = ExtResource("1_yfe7k")
 Button/styles/pressed = ExtResource("1_yfe7k")
+Label/font_sizes/font_size = 11
