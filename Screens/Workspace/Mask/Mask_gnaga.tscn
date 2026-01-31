@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dfumrtsloj26k" path="res://FinalAssets/mascara gnaga 1x/pedaço 12.png" id="11_1pxs7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g5lpo"]
-radius = 4.0
-height = 42.176895
+radius = 3.156601
+height = 35.429665
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxhst"]
 radius = 4.0
@@ -25,26 +25,28 @@ radius = 4.4641037
 height = 27.184616
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6snl6"]
-radius = 4.830124
+radius = 3.5980835
 height = 54.569214
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhnxm"]
 radius = 4.381363
-height = 41.22523
+height = 34.912037
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htk8x"]
-radius = 12.0
-height = 33.497803
+radius = 11.660248
+height = 30.516678
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6x10t"]
+radius = 6.3639374
+height = 22.62741
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dyqvn"]
-radius = 8.485275
-height = 35.355347
+radius = 7.071083
+height = 25.45581
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0217"]
-radius = 10.606602
-height = 42.426453
+radius = 9.192375
+height = 32.526917
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_od3ae"]
 radius = 11.66024
@@ -67,6 +69,14 @@ radius = 3.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni2pj"]
 radius = 1.4142135
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nl6bg"]
+radius = 1.4142151
+height = 4.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o6b88"]
+radius = 1.4142075
+height = 4.2426376
+
 [node name="Mask" type="Node2D" unique_id=401451404]
 script = ExtResource("1_nl6bg")
 
@@ -80,7 +90,8 @@ position = Vector2(128, 106)
 texture = ExtResource("3_ecf3r")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard0/Area2D" parent_id_path=PackedInt32Array(1636635879, 238389369) index="0" unique_id=319669294]
-position = Vector2(84, 81)
+position = Vector2(82.99999, 80.99999)
+rotation = -0.2617994
 shape = SubResource("CapsuleShape2D_g5lpo")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Shards/Shard0/Area2D" parent_id_path=PackedInt32Array(1636635879, 238389369) index="1" unique_id=1167384080]
@@ -108,12 +119,12 @@ position = Vector2(128, 106)
 texture = ExtResource("5_4bxj6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard3/Area2D" parent_id_path=PackedInt32Array(1801131871, 238389369) index="0" unique_id=1637808339]
-position = Vector2(150, 71)
+position = Vector2(149, 70)
 rotation = -2.0943952
 shape = SubResource("CapsuleShape2D_6snl6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard3/Area2D" parent_id_path=PackedInt32Array(1801131871, 238389369) index="1" unique_id=1157156766]
-position = Vector2(172, 83)
+position = Vector2(173, 82)
 rotation = -2.8797934
 shape = SubResource("CapsuleShape2D_fhnxm")
 
@@ -138,12 +149,12 @@ position = Vector2(128, 106)
 texture = ExtResource("7_wcj40")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard5/Area2D" parent_id_path=PackedInt32Array(2073196344, 238389369) index="0" unique_id=1456850505]
-position = Vector2(119.000015, 137.00002)
+position = Vector2(117.000015, 137.00002)
 rotation = 0.7853982
 shape = SubResource("CapsuleShape2D_6x10t")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard5/Area2D" parent_id_path=PackedInt32Array(2073196344, 238389369) index="1" unique_id=1312401964]
-position = Vector2(136, 138)
+position = Vector2(138.99998, 136.99998)
 rotation = -3.926991
 shape = SubResource("CapsuleShape2D_dyqvn")
 
@@ -155,7 +166,7 @@ position = Vector2(128, 106)
 texture = ExtResource("8_ot56q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard6/Area2D" parent_id_path=PackedInt32Array(1806411158, 238389369) index="0" unique_id=131295335]
-position = Vector2(91, 136.00002)
+position = Vector2(91, 137.00002)
 rotation = 2.3561945
 shape = SubResource("CapsuleShape2D_g0217")
 
@@ -189,7 +200,7 @@ rotation = 5.2359877
 shape = SubResource("CapsuleShape2D_npuyp")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard8/Area2D" parent_id_path=PackedInt32Array(650061426, 238389369) index="1" unique_id=1592697338]
-position = Vector2(164.00002, 70)
+position = Vector2(164, 73.00001)
 rotation = 7.0685835
 shape = SubResource("CapsuleShape2D_npuyp")
 
@@ -231,12 +242,12 @@ position = Vector2(128, 106)
 texture = ExtResource("11_1pxs7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="0" unique_id=341589498]
-position = Vector2(128, 95)
+position = Vector2(128, 94)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_bicep")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="1" unique_id=2095772798]
-position = Vector2(128, 108)
+position = Vector2(128, 107)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_t6v5w")
 
@@ -260,60 +271,45 @@ position = Vector2(169, 102)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_t6v5w")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="6" unique_id=1813503510]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="6" unique_id=746258480]
 position = Vector2(173, 114)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="7" unique_id=746258480]
-position = Vector2(173, 114)
-rotation = 3.1415927
-shape = SubResource("CircleShape2D_ni2pj")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="8" unique_id=1365506941]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="7" unique_id=1365506941]
 position = Vector2(155, 127)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="9" unique_id=318227570]
-position = Vector2(142, 88)
-rotation = 3.1415927
-shape = SubResource("CircleShape2D_ni2pj")
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="10" unique_id=2135090310]
-position = Vector2(114, 88)
-rotation = 3.1415927
-shape = SubResource("CircleShape2D_ni2pj")
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="11" unique_id=650974976]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="8" unique_id=650974976]
 position = Vector2(83, 114)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="12" unique_id=1986924234]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="9" unique_id=1986924234]
 position = Vector2(101, 127)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="13" unique_id=322229516]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="10" unique_id=322229516]
 position = Vector2(118, 116)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="14" unique_id=1695686746]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="11" unique_id=1695686746]
 position = Vector2(137, 116)
 rotation = 3.1415927
 shape = SubResource("CircleShape2D_ni2pj")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="15" unique_id=842909573]
-position = Vector2(143, 89)
-rotation = 3.1415927
-shape = SubResource("CircleShape2D_ni2pj")
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="12" unique_id=842909573]
+position = Vector2(142.00002, 88)
+rotation = 2.3561945
+shape = SubResource("CapsuleShape2D_nl6bg")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="16" unique_id=802820027]
-position = Vector2(113, 89)
-rotation = 3.1415927
-shape = SubResource("CircleShape2D_ni2pj")
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Shards/Shard9/Area2D" parent_id_path=PackedInt32Array(2078364211, 238389369) index="13" unique_id=802820027]
+position = Vector2(114, 88)
+rotation = 3.926991
+shape = SubResource("CapsuleShape2D_o6b88")
 
 [editable path="Shards/Shard0"]
 [editable path="Shards/Shard2"]

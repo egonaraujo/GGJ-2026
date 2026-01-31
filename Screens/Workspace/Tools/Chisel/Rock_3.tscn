@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bia3wr6l1m1on"]
+
+[ext_resource type="Script" uid="uid://tofw5r08pc8u" path="res://Screens/Workspace/Tools/Chisel/rock.gd" id="1_g61q4"]
+[ext_resource type="Texture2D" uid="uid://b33me3qp2yj2j" path="res://FinalAssets/texturas/pedra spritesheet 3.png" id="2_g61q4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cg27k"]
+radius = 18.0
+height = 52.0
+
+[node name="Rock_2" type="Node2D" unique_id=1147548903]
+script = ExtResource("1_g61q4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=320380247]
+texture = ExtResource("2_g61q4")
+hframes = 4
+frame = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1356469638]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=584499026]
+position = Vector2(0, 8)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_cg27k")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

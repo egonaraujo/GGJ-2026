@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c05ufoa8i8n8t"]
+
+[ext_resource type="Script" uid="uid://dgjeheu1hao77" path="res://Screens/Workspace/Tools/CleaningRag/dirt.gd" id="1_28ol2"]
+[ext_resource type="Texture2D" uid="uid://w2ac1np0ff65" path="res://FinalAssets/texturas/tex suj 1.png" id="2_4dfve"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0jpr5"]
+radius = 42.0
+height = 86.0
+
+[node name="Dirt_1" type="Node2D" unique_id=1147548903]
+script = ExtResource("1_28ol2")
+
+[node name="Asset" type="Sprite2D" parent="." unique_id=464948276]
+texture = ExtResource("2_4dfve")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1356469638]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=584499026]
+shape = SubResource("CapsuleShape2D_0jpr5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

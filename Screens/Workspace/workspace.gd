@@ -20,7 +20,7 @@ enum ToolType #The collision layer to be used
 	ToolType.CLEANING_RAG: $Dirts
 	, ToolType.BRUSH: $BrushArea/PaintingCanvas
 	, ToolType.CHISEL: $Rocks
-	#, ToolType.SPATULA: ??
+	, ToolType.SPATULA: $Cracks
 }
 
 @onready var tool_buttons = {
@@ -34,7 +34,7 @@ enum ToolType #The collision layer to be used
 const hiddenPos := Vector2(-100,-100)
 var selectedTool := ToolType.NONE
 
-const toolX = 20
+const toolX = 12
 const hideTool = -60
 const toolSpeed = 5 
 var moveHorizontally := []
@@ -50,6 +50,8 @@ func _process(delta: float) -> void:
 		
 		var direction = targetX - tool_buttons[tool].position.x
 		tool_buttons[tool].position.x += direction * toolSpeed * delta
+		
+		# use 1 extra distance for safety
 		if (tool_buttons[tool].position.x > toolX-1):
 			tool_buttons[tool].position.x = toolX
 			toRemove.append(tuple)
@@ -76,11 +78,11 @@ func selectTool(event: InputEvent, tool: ToolType) -> void:
 		self.collisionDetection.collision_layer = tool
 		self.collisionDetection.collision_mask = tool
 
-		#remove old movement
+		# remove old movement
 		moveHorizontally.erase([selectedTool, hideTool])
 		moveHorizontally.erase([tool, toolX])
 		
-		#add new movement
+		# add new movement
 		moveHorizontally.append([selectedTool, toolX])
 		moveHorizontally.append([tool, hideTool])
 		

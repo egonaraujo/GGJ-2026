@@ -27,6 +27,9 @@ offset_bottom = 20.0
 
 [node name="Workspace" parent="." unique_id=1722039641 instance=ExtResource("2_46yet")]
 
+[node name="ToolChisel" parent="Workspace/ToolSelection" parent_id_path=PackedInt32Array(1722039641, 542192761) index="1" unique_id=1123302590]
+position = Vector2(12, 73)
+
 [connection signal="pressed" from="UI/BackLabel/BackButton" to="." method="_on_back_button_pressed"]
 
 [editable path="Workspace"]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bpyrcms5t4jtg"]
+
+[ext_resource type="Script" uid="uid://bm574k8cai5j3" path="res://Screens/Workspace/Tools/Spatula/crack.gd" id="1_42c4j"]
+[ext_resource type="Texture2D" uid="uid://ckg2ko3l83wyg" path="res://FinalAssets/texturas/rachadura spritesheet 1.png" id="2_yneis"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0jpr5"]
+radius = 4.1225224
+height = 25.252773
+
+[node name="Crack_1" type="Node2D" unique_id=1147548903]
+script = ExtResource("1_42c4j")
+
+[node name="Asset" type="Sprite2D" parent="." unique_id=464948276]
+texture = ExtResource("2_yneis")
+hframes = 4
+frame = 3
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1356469638]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=584499026]
+position = Vector2(4, 1.1920929e-07)
+rotation = -1.8325958
+shape = SubResource("CapsuleShape2D_0jpr5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

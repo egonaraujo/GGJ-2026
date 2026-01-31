@@ -4,12 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://rqilk4mjc08j" path="res://Screens/Workspace/Tools/Brush/ColorPicker/ColorPicker.tscn" id="2_bpya4"]
 [ext_resource type="PackedScene" uid="uid://b3vm3jj0odnmk" path="res://Screens/Workspace/Mask/Mask_gnaga.tscn" id="3_fb87o"]
 
-[node name="PaintingCanvas" type="Node2D" unique_id=719413976]
+[node name="PaintingCanvas_gnaga" type="Node2D" unique_id=719413976]
 script = ExtResource("1_p3gh0")
+initialColor = Color(1, 0.874, 0.73, 1)
+pallete = Array[Color]([Color(0.85882354, 0.5647059, 0.1764706, 1), Color(0.9843137, 0.827451, 0.43137255, 1), Color(0.49019608, 0.73333335, 0.75686276, 1), Color(0.8745098, 0.87058824, 0.83137256, 1)])
 
 [node name="ColorPicker" parent="." unique_id=1348064989 instance=ExtResource("2_bpya4")]
 visible = false
-position = Vector2(129, 19)
+position = Vector2(35, 122)
 
 [node name="Mask" parent="." unique_id=401451404 instance=ExtResource("3_fb87o")]
 position = Vector2(0, 14)

@@ -5,14 +5,22 @@ var _inks: Array[Node]
 
 var _chosen_ink: Color;
 
+@export var initialColor = Color(0.385, 0.195, 0.038, 1.0)
+@export var pallete:Array[Color] = [Color.AQUA, Color.GREEN, Color.RED, Color.WHITE]
+
 func _ready() -> void:
+	randomize()
 	self._shards = $Mask.shards()
 	for shard in self._shards:
 		shard.painted.connect(_on_shard_painted)
+		shard.apply_ink(initialColor.darkened(randf_range(0.05,0.25)))
 
 	self._inks = $ColorPicker.inks()
+	var index = 0
 	for ink in self._inks:
+		ink.set_ink_color(pallete[index])
 		ink.selected.connect(_on_ink_selected)
+		index+=1
 
 	self._on_ink_selected(self._inks[0])
 

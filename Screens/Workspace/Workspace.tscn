@@ -2,13 +2,22 @@
 
 [ext_resource type="Script" uid="uid://drxbmd44h4o8g" path="res://Screens/Workspace/workspace.gd" id="1_y70hp"]
 [ext_resource type="Texture2D" uid="uid://bl7ngp0g0bpub" path="res://FinalAssets/BG-cena-principal.png" id="2_0qtcr"]
-[ext_resource type="PackedScene" uid="uid://c05ufoa8i8n8t" path="res://Screens/Workspace/Tools/CleaningRag/Dirt.tscn" id="4_1o61p"]
-[ext_resource type="PackedScene" uid="uid://dq0xxm8gwuep0" path="res://Screens/Workspace/Tools/Chisel/Rock.tscn" id="4_v2hbv"]
+[ext_resource type="Texture2D" uid="uid://ba0dxs2phcubt" path="res://FinalAssets/Obj-livro.png" id="3_bnn2n"]
+[ext_resource type="PackedScene" uid="uid://c05ufoa8i8n8t" path="res://Screens/Workspace/Tools/CleaningRag/Dirt_1.tscn" id="4_1o61p"]
+[ext_resource type="Texture2D" uid="uid://cicj21guy7kpv" path="res://FinalAssets/Obj-todo.png" id="4_orkkj"]
+[ext_resource type="PackedScene" uid="uid://dq0xxm8gwuep0" path="res://Screens/Workspace/Tools/Chisel/Rock_1.tscn" id="4_v2hbv"]
+[ext_resource type="PackedScene" uid="uid://8eeio34g3lnn" path="res://Screens/Workspace/Tools/Chisel/Rock_2.tscn" id="5_j8umi"]
+[ext_resource type="Texture2D" uid="uid://cx4cg0uqen2al" path="res://FinalAssets/Obj-check.png" id="5_orkkj"]
 [ext_resource type="Texture2D" uid="uid://bv0imtp8cdrgo" path="res://FinalAssets/Obj-pincel.png" id="6_0bnau"]
+[ext_resource type="PackedScene" uid="uid://bia3wr6l1m1on" path="res://Screens/Workspace/Tools/Chisel/Rock_3.tscn" id="6_h2vgh"]
 [ext_resource type="Texture2D" uid="uid://ct0a287kbfb3l" path="res://FinalAssets/Obj-espatula.png" id="7_0bnau"]
 [ext_resource type="PackedScene" uid="uid://rkgb4wchfrda" path="res://Screens/Workspace/Tools/Brush/PaintingCanvas_gnaga.tscn" id="7_0qtcr"]
+[ext_resource type="PackedScene" uid="uid://bpyrcms5t4jtg" path="res://Screens/Workspace/Tools/Spatula/Crack_1.tscn" id="7_mmdn5"]
 [ext_resource type="Texture2D" uid="uid://cfjs6f4diqsap" path="res://FinalAssets/Obj-flanela.png" id="8_0cm6y"]
+[ext_resource type="PackedScene" uid="uid://bi2732jbbp7rm" path="res://Screens/Workspace/Tools/Spatula/Crack_2.tscn" id="8_840tg"]
+[ext_resource type="PackedScene" uid="uid://dp6vrgomf5kdd" path="res://Screens/Workspace/Tools/CleaningRag/Dirt_2.tscn" id="8_w24hu"]
 [ext_resource type="Texture2D" uid="uid://vyg24dc06c46" path="res://FinalAssets/Obj- dremel.png" id="9_j8umi"]
+[ext_resource type="Texture2D" uid="uid://bjf7n0fcbfttd" path="res://FinalAssets/Asset-bg-cena-principal.png" id="15_2nebm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2061"]
 size = Vector2(78.8125, 20)
@@ -25,42 +34,94 @@ texture_repeat = 1
 position = Vector2(128, 72)
 texture = ExtResource("2_0qtcr")
 
+[node name="PaperElements" type="Node2D" parent="." unique_id=1332463092]
+
+[node name="ObjLivro" type="Sprite2D" parent="PaperElements" unique_id=487957471]
+position = Vector2(230, 111)
+texture = ExtResource("3_bnn2n")
+
+[node name="ObjTodo" type="Sprite2D" parent="PaperElements" unique_id=2123385137]
+position = Vector2(213, 24)
+texture = ExtResource("4_orkkj")
+centered = false
+
+[node name="ObjCheck" type="Sprite2D" parent="PaperElements/ObjTodo" unique_id=989130385]
+visible = false
+position = Vector2(3, 13)
+texture = ExtResource("5_orkkj")
+centered = false
+
+[node name="ObjCheck2" type="Sprite2D" parent="PaperElements/ObjTodo" unique_id=1995688107]
+visible = false
+position = Vector2(3, 24)
+texture = ExtResource("5_orkkj")
+centered = false
+
+[node name="ObjCheck3" type="Sprite2D" parent="PaperElements/ObjTodo" unique_id=721258537]
+visible = false
+position = Vector2(3, 35)
+texture = ExtResource("5_orkkj")
+centered = false
+
 [node name="BrushArea" type="Node2D" parent="." unique_id=1544073172]
 
 [node name="PaintingCanvas" parent="BrushArea" unique_id=719413976 instance=ExtResource("7_0qtcr")]
 
-[node name="Rocks" type="Node2D" parent="." unique_id=543102453]
+[node name="Cracks" type="Node2D" parent="." unique_id=2085941188]
 
-[node name="Rock" parent="Rocks" unique_id=1147548903 instance=ExtResource("4_v2hbv")]
-position = Vector2(108, 71.99999)
-rotation = 0.90060395
-scale = Vector2(0.29431078, 0.31837335)
+[node name="Crack_1" parent="Cracks" unique_id=268136408 instance=ExtResource("7_mmdn5")]
+position = Vector2(96, 107)
+rotation = 2.6179938
 
-[node name="Rock2" parent="Rocks" unique_id=1367430597 instance=ExtResource("4_v2hbv")]
-position = Vector2(144, 56)
-scale = Vector2(0.329633, 0.329633)
+[node name="Crack_2" parent="Cracks" unique_id=1371301491 instance=ExtResource("8_840tg")]
+position = Vector2(158.99998, 61)
+rotation = 0.5235988
 
 [node name="Dirts" type="Node2D" parent="." unique_id=1406832376]
 
-[node name="Dirt" parent="Dirts" unique_id=1614959803 instance=ExtResource("4_1o61p")]
-position = Vector2(115, 103.99999)
-rotation = 0.9205374
-scale = Vector2(0.37475628, 0.37475628)
+[node name="Dirt_1" parent="Dirts" unique_id=1537413517 instance=ExtResource("4_1o61p")]
+position = Vector2(159.00002, 104.00001)
+rotation = 0.5235988
+scale = Vector2(0.5366883, 0.5366883)
 
-[node name="Dirt2" parent="Dirts" unique_id=367968168 instance=ExtResource("4_1o61p")]
-position = Vector2(112.000015, 48.000004)
-rotation = -0.8861741
-scale = Vector2(0.3633074, 0.3633074)
+[node name="Dirt_2" parent="Dirts" unique_id=1836608536 instance=ExtResource("8_w24hu")]
+position = Vector2(126, 107)
+scale = Vector2(0.5366889, 0.5366889)
+
+[node name="Dirt_3" parent="Dirts" unique_id=1717599743 instance=ExtResource("4_1o61p")]
+position = Vector2(101.000015, 85)
+rotation = 2.0943952
+scale = Vector2(0.5366889, 0.5366889)
+
+[node name="Dirt_4" parent="Dirts" unique_id=41725091 instance=ExtResource("8_w24hu")]
+position = Vector2(150, 59.000004)
+scale = Vector2(0.5366889, 0.5366889)
+
+[node name="Rocks" type="Node2D" parent="." unique_id=543102453]
+
+[node name="Rock_1" parent="Rocks" unique_id=1147548903 instance=ExtResource("4_v2hbv")]
+position = Vector2(101, 51.000004)
+rotation = -1.5707964
+scale = Vector2(0.5249638, 0.5249638)
+
+[node name="Rock_2" parent="Rocks" unique_id=1818644928 instance=ExtResource("5_j8umi")]
+position = Vector2(105, 107.000015)
+rotation = 3.1415927
+scale = Vector2(0.3071516, 0.3071516)
+
+[node name="Rock_3" parent="Rocks" unique_id=53181915 instance=ExtResource("6_h2vgh")]
+position = Vector2(107, 82)
+scale = Vector2(0.3160898, 0.3160898)
 
 [node name="ToolSelection" type="Node2D" parent="." unique_id=542192761]
 
 [node name="ToolRag" type="Area2D" parent="ToolSelection" unique_id=1226628870]
-position = Vector2(20, 46)
+position = Vector2(12, 42)
 
 [node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolRag" unique_id=1574540122]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(7, 0.9999989)
+position = Vector2(6, 0.99999905)
 scale = Vector2(0.8703704, 0.87037027)
 texture = ExtResource("8_0cm6y")
 
@@ -69,11 +130,12 @@ position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_v2061")
 
 [node name="ToolChisel" type="Area2D" parent="ToolSelection" unique_id=1123302590]
-position = Vector2(20, 73)
+position = Vector2(12, 73)
 
 [node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolChisel" unique_id=454401958]
 texture_filter = 1
 texture_repeat = 1
+position = Vector2(1, 0)
 texture = ExtResource("9_j8umi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolChisel" unique_id=1192737098]
@@ -81,19 +143,20 @@ position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_v2061")
 
 [node name="ToolSpatula" type="Area2D" parent="ToolSelection" unique_id=1681690213]
-position = Vector2(20, 98)
+position = Vector2(12, 98)
 
 [node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolSpatula" unique_id=1454312307]
 texture_filter = 1
 texture_repeat = 1
 texture = ExtResource("7_0bnau")
+offset = Vector2(0.5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToolSelection/ToolSpatula" unique_id=1232628504]
 position = Vector2(8.59375, -1.0000038)
 shape = SubResource("RectangleShape2D_v2061")
 
 [node name="ToolBrush" type="Area2D" parent="ToolSelection" unique_id=423841146]
-position = Vector2(20, 124)
+position = Vector2(12, 123)
 
 [node name="Sprite" type="Sprite2D" parent="ToolSelection/ToolBrush" unique_id=1895390701]
 texture_filter = 1
@@ -129,6 +192,12 @@ polygon = PackedVector2Array(0, 4, -10, 0, 0, -6)
 visible = false
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(10, 0, 0, 4, 0, -5)
+
+[node name="Referencia" type="Sprite2D" parent="." unique_id=258451131]
+visible = false
+modulate = Color(1, 1, 1, 0.7882353)
+position = Vector2(128, 72)
+texture = ExtResource("15_2nebm")
 
 [connection signal="input_event" from="ToolSelection/ToolRag" to="." method="_on_tool_rag_input_event"]
 [connection signal="input_event" from="ToolSelection/ToolChisel" to="." method="_on_tool_chisel_input_event"]
